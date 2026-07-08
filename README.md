@@ -2,7 +2,7 @@
 
 **Soft Atlas** is a calm editorial layout pack for Obsidian knowledge pages.
 
-![Soft Atlas sample screenshot](assets/sample-screenshot.png)
+![Soft Atlas sample screenshot](assets/sample-screenshot.svg)
 
 It is designed to help people turn scattered notes into readable, shareable, reusable outputs: knowledge articles, course pages, prompts, checklists, workshop material, and research summaries.
 
@@ -25,6 +25,7 @@ soft-atlas-obsidian-layout/
     Blank Knowledge Page Template.md
   assets/
     sample-screenshot.png
+    sample-screenshot.svg
   sample-preview.html
 ```
 
