@@ -1,0 +1,642 @@
+/*
+  Soft Atlas for Obsidian
+  Closer visual match to a soft editorial knowledge-atlas style.
+
+  Usage:
+  ---
+  cssclasses:
+    - soft-atlas-page
+  ---
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Lustria&display=swap");
+
+:is(.soft-atlas-page, .pathfinder-page) {
+  --pf-ink: #090909;
+  --pf-body: #505050;
+  --pf-soft: #6f6c67;
+  --pf-hairline: #e9e5dc;
+  --pf-page: #fffefd;
+  --pf-panel: #f8f6f0;
+  --pf-panel-2: #f3f0e8;
+  --pf-blue: #5a6681;
+  --pf-blue-dark: #48536c;
+  --pf-rose: #c5a39d;
+  --pf-mauve: #9b8189;
+  --pf-sand: #e3d5c3;
+  --pf-shadow: 5px 5px 14px rgba(208, 208, 208, 0.85);
+  --font-text-theme: "Lustria", Georgia, serif;
+  --font-interface-theme: "Josefin Sans", Helvetica, Arial, sans-serif;
+  --font-monospace-theme: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:is(.soft-atlas-page, .pathfinder-page).markdown-preview-view,
+:is(.soft-atlas-page, .pathfinder-page).markdown-source-view.mod-cm6 {
+  background: var(--pf-page) !important;
+  color: var(--pf-body) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .markdown-preview-sizer {
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  padding: 0 24px 90px !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .markdown-preview-section {
+  font-family: "Lustria", Georgia, serif !important;
+  color: var(--pf-body) !important;
+  font-size: 20px !important;
+  line-height: 1.72 !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .markdown-preview-section > div {
+  color: var(--pf-body);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) p,
+:is(.soft-atlas-page, .pathfinder-page) li {
+  font-family: "Lustria", Georgia, serif !important;
+  color: var(--pf-body) !important;
+  font-size: 20px;
+  line-height: 1.72;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) p {
+  margin: 0 0 1.28em;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) h1,
+:is(.soft-atlas-page, .pathfinder-page) h2,
+:is(.soft-atlas-page, .pathfinder-page) h3,
+:is(.soft-atlas-page, .pathfinder-page) h4,
+:is(.soft-atlas-page, .pathfinder-page) .pf-logo,
+:is(.soft-atlas-page, .pathfinder-page) .pf-nav,
+:is(.soft-atlas-page, .pathfinder-page) .pf-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-kicker,
+:is(.soft-atlas-page, .pathfinder-page) .pf-brand-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-card-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-step-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-step-number,
+:is(.soft-atlas-page, .pathfinder-page) .pf-pill {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+  color: var(--pf-ink) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) h1 {
+  font-size: 60px !important;
+  line-height: 1.1 !important;
+  font-weight: 600 !important;
+  margin: 0 0 22px !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) h2 {
+  font-size: 30px !important;
+  line-height: 1.28 !important;
+  font-weight: 700 !important;
+  margin: 62px 0 22px !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) h3 {
+  font-size: 21px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  margin: 34px 0 10px !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) a {
+  color: var(--pf-blue-dark) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) strong {
+  color: var(--pf-ink);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border-bottom: 1px solid var(--pf-hairline);
+  padding: 18px 0 20px;
+  margin-bottom: 14px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-logo {
+  font-size: 19px;
+  line-height: 0.92;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-logo span {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--pf-soft);
+  margin-top: 3px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-nav a {
+  color: var(--pf-ink) !important;
+  text-decoration: none;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-nav .pf-pill {
+  background: var(--pf-blue);
+  color: #ffffff !important;
+  border-radius: 999px;
+  padding: 12px 18px 10px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-breadcrumb {
+  color: var(--pf-soft);
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif !important;
+  font-size: 11px;
+  line-height: 1.3;
+  text-align: right;
+  text-transform: uppercase;
+  margin: 16px 0 54px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 704px) 270px;
+  gap: 70px;
+  align-items: start;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-main {
+  min-width: 0;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.57fr) minmax(240px, 0.43fr);
+  gap: 42px;
+  align-items: center;
+  margin: 0 0 64px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-kicker {
+  color: var(--pf-soft) !important;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-title {
+  font-size: 60px;
+  line-height: 1.1;
+  font-weight: 600;
+  margin: 0 0 24px;
+  max-width: 440px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-summary {
+  color: var(--pf-body) !important;
+  font-size: 20px;
+  line-height: 1.58;
+  max-width: 480px;
+  margin-bottom: 22px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-useful {
+  color: var(--pf-body) !important;
+  font-size: 15px;
+  line-height: 2.05;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-useful strong {
+  display: inline;
+  font-family: "Lustria", Georgia, serif !important;
+  font-weight: 400;
+  color: var(--pf-body);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-figure-card {
+  background: #fbfaf6;
+  border: 0;
+  box-shadow: var(--pf-shadow);
+  padding: 10px;
+  border-radius: 1px;
+  transform: translateY(16px);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-figure-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-diagram-card {
+  min-height: 185px;
+  background:
+    radial-gradient(ellipse at 42% 58%, transparent 0 18%, rgba(88, 100, 126, 0.22) 18.5% 19.3%, transparent 19.8%),
+    radial-gradient(ellipse at 42% 58%, transparent 0 31%, rgba(88, 100, 126, 0.15) 31.4% 32.1%, transparent 32.8%),
+    radial-gradient(ellipse at 42% 58%, transparent 0 45%, rgba(196, 161, 154, 0.16) 45.3% 46%, transparent 46.8%),
+    radial-gradient(circle at 42% 58%, rgba(228, 212, 189, 0.48) 0 6%, transparent 6.7%),
+    linear-gradient(90deg, transparent 0 70%, rgba(88, 100, 126, 0.16) 70% 70.5%, transparent 70.5%),
+    linear-gradient(0deg, transparent 0 23%, rgba(196, 161, 154, 0.16) 23% 24%, transparent 24%),
+    #f3eee6;
+  border-radius: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-diagram-card::before {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 42px;
+  width: 58px;
+  height: 72px;
+  border-left: 2px solid rgba(88, 100, 126, 0.42);
+  background:
+    linear-gradient(0deg, rgba(88, 100, 126, 0.36) 0 1px, transparent 1px 17px, rgba(196, 161, 154, 0.34) 17px 18px, transparent 18px 35px, rgba(88, 100, 126, 0.22) 35px 36px, transparent 36px);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-diagram-card::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 41%;
+  top: 55%;
+  border-radius: 50%;
+  background: #fbfaf6;
+  border: 3px solid var(--pf-blue);
+  box-shadow:
+    64px -32px 0 -3px var(--pf-rose),
+    -50px 28px 0 -3px var(--pf-sand);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-diagram-title {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--pf-ink);
+  text-transform: uppercase;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-diagram-note {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  width: 120px;
+  color: var(--pf-blue-dark);
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-size: 9px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-toc {
+  background: var(--pf-panel);
+  border: 0;
+  padding: 28px 34px 30px;
+  margin: 18px 0 66px;
+  border-radius: 2px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-toc-title {
+  font-family: "Lustria", Georgia, serif !important;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--pf-body);
+  margin-bottom: 14px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-toc ol {
+  margin: 0;
+  padding-left: 1.3em;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-toc li,
+:is(.soft-atlas-page, .pathfinder-page) .pf-toc a {
+  color: var(--pf-body) !important;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-side {
+  border-left: 1px solid var(--pf-hairline);
+  padding-left: 48px;
+  min-height: 100%;
+  position: sticky;
+  top: 74px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-brand-card {
+  margin: 0 0 52px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-brand-mark {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  margin: 0 0 24px;
+  background:
+    conic-gradient(from -35deg, transparent 0 20%, rgba(88, 100, 126, 0.86) 20% 23%, transparent 23% 50%, rgba(196, 161, 154, 0.72) 50% 53%, transparent 53% 100%),
+    radial-gradient(circle, transparent 0 33%, rgba(88, 100, 126, 0.34) 34% 35%, transparent 36% 52%, rgba(154, 125, 134, 0.22) 53% 54%, transparent 55%),
+    linear-gradient(90deg, transparent 0 48%, rgba(88, 100, 126, 0.28) 49% 51%, transparent 52%),
+    linear-gradient(0deg, transparent 0 48%, rgba(88, 100, 126, 0.18) 49% 51%, transparent 52%),
+    #f5f2eb;
+  border: 1px solid rgba(88, 100, 126, 0.24);
+  box-shadow: inset 0 0 0 10px #f5f2eb, 4px 4px 12px rgba(177, 169, 156, 0.26);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-brand-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-card-title {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-brand-title {
+  font-size: 27px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-side p {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--pf-body) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-note-card {
+  background: var(--pf-panel);
+  padding: 25px 22px 24px;
+  border-radius: 2px;
+  border-left: 4px solid var(--pf-blue);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-note-card p:last-child {
+  margin-bottom: 0;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-process {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0 44px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-step {
+  background: var(--pf-panel);
+  border-top: 4px solid var(--pf-blue);
+  padding: 17px 14px 15px;
+  min-height: 110px;
+  border-radius: 2px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-step-number {
+  color: var(--pf-blue) !important;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-step-title {
+  font-size: 15px;
+  line-height: 1.22;
+  font-weight: 700;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-related {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-related-card {
+  padding-top: 18px;
+  border-top: 1px solid var(--pf-hairline);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-thumb {
+  aspect-ratio: 1.42;
+  background:
+    linear-gradient(90deg, transparent 0 16%, rgba(88, 100, 126, 0.34) 16% 17%, transparent 17%),
+    linear-gradient(0deg, transparent 0 26%, rgba(88, 100, 126, 0.18) 26% 27%, transparent 27% 50%, rgba(196, 161, 154, 0.22) 50% 51%, transparent 51% 72%, rgba(154, 125, 134, 0.15) 72% 73%, transparent 73%),
+    radial-gradient(circle at 17% 25%, var(--pf-blue) 0 3%, transparent 3.5%),
+    var(--pf-panel-2);
+  box-shadow: 3px 3px 9px rgba(208,208,208,0.65);
+  margin-bottom: 16px;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-related-card:nth-child(2) .pf-thumb {
+  background:
+    radial-gradient(circle at 24% 64%, var(--pf-blue) 0 4%, transparent 4.5%),
+    radial-gradient(circle at 54% 38%, var(--pf-rose) 0 4%, transparent 4.5%),
+    radial-gradient(circle at 78% 58%, var(--pf-mauve) 0 4%, transparent 4.5%),
+    linear-gradient(142deg, transparent 0 37%, rgba(88, 100, 126, 0.35) 38% 39.5%, transparent 40%),
+    linear-gradient(35deg, transparent 0 58%, rgba(196, 161, 154, 0.32) 59% 60.5%, transparent 61%),
+    var(--pf-panel-2);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-related-card:nth-child(3) .pf-thumb {
+  background:
+    linear-gradient(90deg, transparent 0 12%, rgba(88, 100, 126, 0.3) 12% 13%, transparent 13%),
+    linear-gradient(0deg, transparent 0 28%, rgba(88, 100, 126, 0.14) 28% 30%, transparent 30% 52%, rgba(196, 161, 154, 0.18) 52% 54%, transparent 54% 75%, rgba(154, 125, 134, 0.12) 75% 77%, transparent 77%),
+    linear-gradient(90deg, transparent 0 28%, rgba(228, 212, 189, 0.7) 28% 52%, transparent 52%),
+    radial-gradient(circle at 16% 26%, var(--pf-blue) 0 3%, transparent 3.5%),
+    var(--pf-panel-2);
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-related-card p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .cm-content,
+:is(.soft-atlas-page, .pathfinder-page) .cm-line {
+  font-family: "Lustria", Georgia, serif !important;
+  color: var(--pf-body) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .cm-header,
+:is(.soft-atlas-page, .pathfinder-page) .cm-strong {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif !important;
+  color: var(--pf-ink) !important;
+}
+
+@media (max-width: 980px) {
+  :is(.soft-atlas-page, .pathfinder-page) .pf-shell {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) .pf-side {
+    position: static;
+    border-left: 0;
+    border-top: 1px solid var(--pf-hairline);
+    padding: 34px 0 0;
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) .pf-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) .pf-related {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  :is(.soft-atlas-page, .pathfinder-page) .markdown-preview-sizer {
+    padding-inline: 18px !important;
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) .pf-topbar,
+  :is(.soft-atlas-page, .pathfinder-page) .pf-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) .pf-breadcrumb {
+    text-align: left;
+    margin-bottom: 36px;
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) .pf-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) h1,
+  :is(.soft-atlas-page, .pathfinder-page) .pf-title {
+    font-size: 42px !important;
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) .pf-summary,
+  :is(.soft-atlas-page, .pathfinder-page) p,
+  :is(.soft-atlas-page, .pathfinder-page) li {
+    font-size: 18px;
+  }
+
+  :is(.soft-atlas-page, .pathfinder-page) .pf-process {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+  Strong visual layer
+  These rules make the style obvious even when another Obsidian theme or
+  snippet tries to override page background, typography, or panel colors.
+*/
+
+.markdown-reading-view .markdown-preview-view:is(.soft-atlas-page, .pathfinder-page),
+.markdown-source-view.mod-cm6:is(.soft-atlas-page, .pathfinder-page),
+body .workspace-leaf-content[data-type="markdown"] :is(.soft-atlas-page, .pathfinder-page) {
+  --pf-ink: #050505;
+  --pf-body: #4f4d49;
+  --pf-soft: #756f68;
+  --pf-page: #f2efe7;
+  --pf-sheet: #fffdf8;
+  --pf-panel: #f6f3eb;
+  --pf-panel-2: #eee8dc;
+  --pf-blue: #58647e;
+  --pf-blue-dark: #424d66;
+  --pf-rose: #c4a19a;
+  --pf-mauve: #9a7d86;
+  --pf-sand: #e4d4bd;
+  --pf-hairline: #dfd9cf;
+  background: var(--pf-page) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .markdown-preview-sizer,
+:is(.soft-atlas-page, .pathfinder-page).markdown-preview-view .markdown-preview-sizer {
+  background: var(--pf-sheet) !important;
+  box-shadow: 0 18px 50px rgba(52, 48, 43, 0.08) !important;
+  border-left: 1px solid rgba(223, 217, 207, 0.8);
+  border-right: 1px solid rgba(223, 217, 207, 0.8);
+  min-height: 100vh;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .markdown-preview-section,
+:is(.soft-atlas-page, .pathfinder-page) .markdown-rendered,
+:is(.soft-atlas-page, .pathfinder-page) p,
+:is(.soft-atlas-page, .pathfinder-page) li {
+  font-family: "Lustria", Georgia, "Times New Roman", serif !important;
+  color: var(--pf-body) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) h1,
+:is(.soft-atlas-page, .pathfinder-page) h2,
+:is(.soft-atlas-page, .pathfinder-page) h3,
+:is(.soft-atlas-page, .pathfinder-page) h4,
+:is(.soft-atlas-page, .pathfinder-page) .pf-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-logo,
+:is(.soft-atlas-page, .pathfinder-page) .pf-nav,
+:is(.soft-atlas-page, .pathfinder-page) .pf-kicker,
+:is(.soft-atlas-page, .pathfinder-page) .pf-brand-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-card-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-step-title,
+:is(.soft-atlas-page, .pathfinder-page) .pf-step-number,
+:is(.soft-atlas-page, .pathfinder-page) .pf-pill {
+  font-family: "Josefin Sans", "Avenir Next", Avenir, "Trebuchet MS", Helvetica, Arial, sans-serif !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-topbar {
+  background: var(--pf-sheet);
+  border-bottom: 1px solid var(--pf-hairline) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-title {
+  color: var(--pf-ink) !important;
+  font-size: 62px !important;
+  line-height: 1.08 !important;
+  font-weight: 600 !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-summary {
+  color: #56534e !important;
+  font-family: "Lustria", Georgia, "Times New Roman", serif !important;
+  font-size: 21px !important;
+  line-height: 1.62 !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-toc,
+:is(.soft-atlas-page, .pathfinder-page) .pf-note-card,
+:is(.soft-atlas-page, .pathfinder-page) .pf-step {
+  background: var(--pf-panel) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-figure-card {
+  background: #fbf8f1 !important;
+  box-shadow: 7px 7px 18px rgba(177, 169, 156, 0.42) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-diagram-card,
+:is(.soft-atlas-page, .pathfinder-page) .pf-thumb {
+  background-color: var(--pf-panel-2) !important;
+}
+
+:is(.soft-atlas-page, .pathfinder-page) .pf-nav .pf-pill {
+  background: var(--pf-blue) !important;
+  color: #fff !important;
+}
